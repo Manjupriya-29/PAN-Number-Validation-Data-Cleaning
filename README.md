@@ -6,9 +6,10 @@
 
 DATASET : [PAN NUMBER DATASET](PAN_Number_Validation_Dataset.csv)
 
----
 
-My Final SQL Script is in [Project_script](project_scripts.sql)
+***Tools Used***: PostgreSQL
+
+Final SQL Script : [Project_script](project_scripts.sql)
 
 ---
 
@@ -62,9 +63,9 @@ For the next ***4 digits***:
 
 **Final Deliverables**:
 
-1.Detailed Report: A list of all PAN numbers with a new column indicating their status as Valid or Invalid.
+1.*Detailed Report*: A list of all PAN numbers with a new column indicating their status as Valid or Invalid.
 
-2.Summary Report: A high-level summary containing:
+2.*Summary Report*: A high-level summary containing:
 
 - Total records processed
 
@@ -74,13 +75,11 @@ For the next ***4 digits***:
 
 - Total missing/incomplete PANs
 
-***Tools Used***: PostgreSQL
-
 ---
 
 **2. Step-by-Step Implementation**
 
-**1. Create a Staging Table**: Create a simple table with one column to hold the raw dat.
+*1. Create a Staging Table*: Create a simple table with one column to hold the raw dat.
    
 ```
 
@@ -89,7 +88,7 @@ CREATE TABLE stg_pan_numbers_dataset (
 );
 
 ```
-**2. Data Cleaning**
+*2. Data Cleaning*
 The goal is to create a cleaned dataset by applying the four data cleaning rules. This is done in a single query using a Common Table Expression (CTE).
 
 **Key SQL Functions Used**:
@@ -118,7 +117,7 @@ SELECT * FROM cte_cleaned_pan;
 
 ***Result***: This query returns 9,025 cleaned, unique PAN numbers ready for validation.
 
-**3. Data Validation**
+*3. Data Validation*
 Validating the complex rules requires creating custom User-Defined Functions (UDFs).
 
 *A) Create Function*: Check for Adjacent Characters
@@ -240,6 +239,8 @@ FROM cte_totals;
 ```
 **Result**:
 
+![Output images](PAN_PROJECT_OUTPUT.png)
+
 Total Processed Records: 10,000
 
 Total Valid PANs: 3,186
@@ -248,3 +249,4 @@ Total Invalid PANs: 5,839
 
 Total Missing/Incomplete PANs: 975 (10,000 - (3,186 + 5,839))
 
+---

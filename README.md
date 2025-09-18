@@ -4,11 +4,11 @@
 
 ---
 
-DATASET : [PAN NUMBER DATASET](project_script.sql)
+DATASET : [PAN NUMBER DATASET](pan_number_validation_dataset.csv)
 
 ---
 
-My Final SQL Script is in [Project_script](project_script.sql)
+My Final SQL Script is in [Project_script](project_scripts.sql)
 
 ---
 

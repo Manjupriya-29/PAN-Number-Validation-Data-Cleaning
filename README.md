@@ -4,6 +4,14 @@
 
 ---
 
+DATASET : [PAN NUMBER DATASET](project_script.sql)
+
+---
+
+My Final SQL Script is in [Project_script](project_script.sql)
+
+---
+
 **1. Project Overview & Rules**
 **What is a PAN?**
 
